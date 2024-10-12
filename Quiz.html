@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions</title>
+    <link rel="stylesheet" href="stylee/quiz.css">
+    
+    <link rel="stylesheet" href="stylee/Header.css">
+</head>
+<body>
+    <header >
+        <div class="logo"><img src="images/logo.png" alt="Logo"></div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <nav>
+            <ul id="nav-list">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="convert.html">Conversion</a></li>
+                <li><a href="Quiz.html">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Digital Logic Design Quiz</h1>
+        <div class="card" onclick="window.location.href='questions.html?difficulty=easy'">
+            <h2>Easy</h2>
+        </div>
+        <div class="card" onclick="window.location.href='questions.html?difficulty=medium'">
+            <h2>Medium</h2>
+        </div>
+        <div class="card" onclick="window.location.href='questions.html?difficulty=hard'">
+            <h2>Hard</h2>
+        </div>
+        <div class="card" onclick="window.location.href='questions.html?difficulty=veryHard'">
+            <h2>Very Hard</h2>
+        </div>
+    </div>
+    
+    <script src="Data/questions.js"></script>
+    <script src="Data/script.js"></script>
+    <script src="Data/botton.js"></script>
+</body>
+</html>

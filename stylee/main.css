@@ -1,0 +1,190 @@
+.banner {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.banner video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Ensure the video stays behind the content */
+}
+
+.banner .content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+}
+
+/* Main content styling */
+main {
+    padding: 20px;
+}
+
+.friend {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.friend .me h1 {
+    font-size: 2.5em;
+}
+
+.friend .me h2 {
+    font-size: 1.8em;
+}
+
+.friend ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.friend ul li img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.content {
+    position: relative;
+    z-index: 2; /* Place the content above the video */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Full height of the section */
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 20px; /* Padding for the content */
+}
+
+.content h1 {
+    font-size: 3rem; /* Large heading */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+.content p {
+    font-size: 1.25rem; /* Standard paragraph size */
+    max-width: 800px; /* Max width for better readability */
+}
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color:white;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-top: 20px;
+    color: white;
+    
+}
+
+h4 {
+    font-size: 1.5rem;
+    color: #111112;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.conversion-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: black;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    background-color: #245e6c;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #2980b9;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.card a:hover {
+    background-color: #1b10ae;
+}
+
+.video-link {
+    margin-top: 30px;
+    padding: 10px 15px;
+    background-color: #27ae60;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.video-link:hover {
+    background-color: #219653;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header nav ul {
+        display: none; /* Hide the navigation menu by default on smaller screens */
+        flex-direction: column; /* Stack items vertically */
+        position: absolute; /* Position it absolutely */
+        background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+        width: 100%; /* Full width */
+        top: 50px; /* Below the header */
+        left: 0; /* Align to the left */
+        z-index: 10; /* Ensure it's above other content */
+    }
+
+    header nav ul.active {
+        display: flex; /* Show the menu when it's active */
+    }
+
+    .menu-toggle {
+        display: flex; /* Show the hamburger icon */
+    }
+
+    .content h1 {
+        font-size: 2.5rem; /* Smaller heading on smaller screens */
+    }
+
+    .content p {
+        font-size: 1rem; /* Smaller paragraph on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 2rem; /* Further reduce heading size */
+    }
+
+    .content p {
+        font-size: 0.9rem; /* Further reduce paragraph size */
+    }
+}

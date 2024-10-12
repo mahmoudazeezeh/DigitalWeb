@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number System Conversion</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="stylee/Header.css">
+    <link rel="stylesheet" href="stylee/convert.css">
+    <link rel="stylesheet" href="stylee/footer.css">
+    
+</head>
+<body>
+    <header >
+        <div class="logo"><img src="images/logo.png" alt="Logo"></div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <nav>
+            <ul id="nav-list">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="convert.html">Conversion</a></li>
+                <li><a href="Quiz.html">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="number-conversion" class="conversion-section">
+            <h2>Number System Conversion</h2>
+            <form class="conversion-form">
+                <label for="inputNumber">Enter Number:</label>
+                <input type="text" id="inputNumber" placeholder="Enter number">
+                
+                <label for="inputBase">From:</label>
+                <select id="inputBase">
+                    <option value="10">Decimal</option>
+                    <option value="2">Binary</option>
+                    <option value="8">Octal</option>
+                    <option value="16">Hexadecimal</option>
+                </select>
+                
+                <label for="outputBase">To:</label>
+                <select id="outputBase">
+                    <option value="10">Decimal</option>
+                    <option value="2">Binary</option>
+                    <option value="8">Octal</option>
+                    <option value="16">Hexadecimal</option>
+                </select>
+                
+                <button type="button" onclick="convertNumber()">Convert</button>
+                <p id="numberResult">Result: </p>
+            </form>
+            <h3>Conversion Table</h3>
+            <table class="conversion-table">
+                <thead>
+                    <tr>
+                        <th>Input Type</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Decimal</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>Binary</td>
+                        <td>1010</td>
+                    </tr>
+                    <tr>
+                        <td>Octal</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>Hexadecimal</td>
+                        <td>A</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="logic-gates" class="conversion-section">
+            <h2>Logic Gates</h2>
+            <form class="conversion-form">
+                <label for="gateInput1">Input 1:</label>
+                <input type="text" id="gateInput1" placeholder="0 or 1">
+                
+                <label for="gateInput2">Input 2:</label>
+                <input type="text" id="gateInput2" placeholder="0 or 1">
+                
+                <label for="gateType">Gate Type:</label>
+                <select id="gateType">
+                    <option value="AND">AND</option>
+                    <option value="OR">OR</option>
+                    <option value="NOT">NOT</option>
+                    <option value="NAND">NAND</option>
+                    <option value="NOR">NOR</option>
+                    <option value="XOR">XOR</option>
+                    <option value="XNOR">XNOR</option>
+                </select>
+
+                <button type="button" onclick="calculateGate()">Calculate</button>
+                <p id="gateResult">Result: </p>
+            </form>
+            <h3>Logic Gates Table</h3>
+            <table class="conversion-table">
+                <thead>
+                    <tr>
+                        <th>Gate Type</th>
+                        <th>Operation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>AND</td>
+                        <td>1 AND 1 = 1</td>
+                    </tr>
+                    <tr>
+                        <td>OR</td>
+                        <td>1 OR 0 = 1</td>
+                    </tr>
+                    <tr>
+                        <td>NOT</td>
+                        <td>NOT 0 = 1</td>
+                    </tr>
+                    <tr>
+                        <td>NAND</td>
+                        <td>1 NAND 1 = 0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="boolean-simplification" class="conversion-section">
+            <h2>Boolean Simplification</h2>
+            <form class="conversion-form">
+                <label for="booleanExpression">Enter Boolean Expression:</label>
+                <input type="text" id="booleanExpression" placeholder="e.g., A && B || !A">
+                
+                <button type="button" onclick="simplifyExpression()">Simplify</button>
+                <p id="booleanResult">Simplified Expression: </p>
+            </form>
+        </section>
+
+        <section id="code-conversion" class="conversion-section">
+            <h2>Code Conversion</h2>
+            <form class="conversion-form">
+                <label for="inputCode">Enter Binary:</label>
+                <input type="text" id="inputCode" placeholder="Binary value">
+                
+                <label for="outputCodeType">Convert To:</label>
+                <select id="outputCodeType">
+                    <option value="gray">Gray Code</option>
+                    <option value="bcd">BCD</option>
+                    <option value="excess3">Excess-3</option>
+                </select>
+
+                <button type="button" onclick="convertCode()">Convert</button>
+                <p id="codeResult">Converted Code: </p>
+            </form>
+        </section>
+
+        <section id="complements" class="conversion-section">
+            <h2>Complements</h2>
+            <form class="conversion-form">
+                <label for="complementInput">Enter Binary:</label>
+                <input type="text" id="complementInput" placeholder="Binary value">
+
+                <label for="complementType">Select Complement:</label>
+                <select id="complementType">
+                    <option value="1s">1's Complement</option>
+                    <option value="2s">2's Complement</option>
+                </select>
+
+                <button type="button" onclick="calculateComplement()">Calculate</button>
+                <p id="complementResult">Complement: </p>
+            </form>
+        </section>
+
+        <section id="sequential-circuits" class="conversion-section">
+            <h2>Sequential Circuits - Flip-Flops</h2>
+            <p>Flip-Flops are essential memory elements in sequential circuits. They store a single bit of data and transition to a new state based on their current state and inputs. Select a flip-flop type to calculate the next state:</p>
+            
+            <form class="conversion-form">
+                <label for="flipFlopType">Select Flip-Flop Type:</label>
+                <select id="flipFlopType">
+                    <option value="d">D Flip-Flop</option>
+                    <option value="jk">JK Flip-Flop</option>
+                    <option value="t">T Flip-Flop</option>
+                </select>
+        
+                <div id="flipFlopInputs">
+                    <!-- Specific inputs will load here based on flip-flop type -->
+                </div>
+        
+                <button type="button" onclick="convertFlipFlop()">Calculate</button>
+                <p id="flipFlopResult"></p>
+            </form>
+        
+            <h3>How Flip-Flops Work</h3>
+            <p id="flipFlopExplanation"></p>
+        
+            <h3>Flip-Flop Truth Tables</h3>
+            <table class="conversion-table">
+                <thead>
+                    <tr>
+                        <th>Flip-Flop Type</th>
+                        <th>Input</th>
+                        <th>Next State</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>D Flip-Flop</td>
+                        <td>D</td>
+                        <td>Next state = D</td>
+                    </tr>
+                    <tr>
+                        <td>JK Flip-Flop</td>
+                        <td>J, K</td>
+                        <td>Next state = JQ' + K'Q</td>
+                    </tr>
+                    <tr>
+                        <td>T Flip-Flop</td>
+                        <td>T</td>
+                        <td>Next state = T XOR Q</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+    </main>
+
+   
+  <footer class="footer">
+    <div class="container">
+     <div class="row">
+       <div class="footer-col">
+         <h4>company</h4>
+         <ul>
+           <li><a href="#">about us</a></li>
+           <li><a href="#">our services</a></li>
+           <li><a href="#">privacy policy</a></li>
+           <li><a href="#">affiliate program</a></li>
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>get help</h4>
+         <ul>
+           <li><a href="#">FAQ</a></li>
+           <li><a href="#">shipping</a></li>
+           <li><a href="#">returns</a></li>
+           <li><a href="#">order status</a></li>
+           <li><a href="#">payment options</a></li>
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>online shop</h4>
+         <ul>
+           <li><a href="#">watch</a></li>
+           <li><a href="#">bag</a></li>
+           <li><a href="#">shoes</a></li>
+           <li><a href="#">dress</a></li>
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>follow us</h4>
+         <div class="social-links">
+           <a href="https://github.com/mahmoudazeezeh"><i class="fa-brands fa-github"></i></a>
+           <a href="https://x.com/Mahmood16002223"><i class="fab fa-twitter"></i></a>
+           <a href="https://www.instagram.com/azeezeh_codes/profilecard/?igsh=MTVodjh6Y2IyY2xpZg=="><i class="fab fa-instagram"></i></a>
+           <a href="https://www.linkedin.com/in/mahmoud-azeezeh-370465293?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="fab fa-linkedin-in"></i></a>
+         </div>
+       </div>
+     </div>
+    </div>
+ </footer>
+
+    <script src="Data/convert.js"></script>
+    <script src="Data/botton.js"></script>
+</body>
+</html>
